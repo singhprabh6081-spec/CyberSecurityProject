@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSec Scanner</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            width: 400px;
+            background-color: #111827;
+            color: #e5e7eb;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 1rem;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        .header h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+        }
+        .header img {
+            width: 2rem;
+            height: 2rem;
+        }
+        #scan-button {
+            width: 100%;
+            background-color: #4f46e5;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 1rem;
+        }
+        #scan-button:hover {
+            background-color: #4338ca;
+        }
+        #scan-button:disabled {
+            background-color: #374151;
+            cursor: not-allowed;
+        }
+        #results-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        #placeholder {
+            text-align: center;
+            color: #9ca3af;
+        }
+        .result-item {
+            padding: 0.75rem;
+            background-color: #1f2937;
+            border-radius: 0.375rem;
+            border-left-width: 4px;
+        }
+        .result-item h3 {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #ffffff;
+            margin: 0;
+        }
+        .result-item p {
+            font-size: 0.875rem;
+            color: #d1d5db;
+            margin-top: 0.25rem;
+            margin-bottom: 0;
+        }
+        .result-item .severity-label {
+             font-size: 0.75rem;
+             color: #9ca3af;
+             margin-top: 0.5rem;
+        }
+        .result-item .severity-label span {
+            font-weight: 700;
+        }
+        .severity-high { border-left-color: #ef4444; }
+        .severity-medium { border-left-color: #f97316; }
+        .severity-low { border-left-color: #eab308; }
+        .severity-info { border-left-color: #3b82f6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>WebSec Scanner</h1>
+            <img src="icons/icon48.png" alt="WebSec Scanner Icon">
+        </div>
+        <button id="scan-button">Scan Current Page</button>
+        <div id="results-container">
+            <p id="placeholder">Click the scan button to begin analysis.</p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

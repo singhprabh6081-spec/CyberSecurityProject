@@ -1,0 +1,1 @@
+console.log("WebSec Scanner content script loaded.");

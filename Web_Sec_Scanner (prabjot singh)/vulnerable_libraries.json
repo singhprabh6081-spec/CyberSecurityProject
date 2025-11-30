@@ -1,0 +1,24 @@
+{
+  "libraries": [
+    {
+      "name": "jquery",
+      "vulnerabilities": [
+        {
+          "version_range": "<3.5.0",
+          "description": "Cross-site Scripting (XSS) vulnerability.",
+          "cve": "CVE-2020-11022"
+        }
+      ]
+    },
+    {
+      "name": "angular.js",
+      "vulnerabilities": [
+        {
+          "version_range": "<1.8.0",
+          "description": "Prototype pollution and potential for XSS.",
+          "cve": "N/A"
+        }
+      ]
+    }
+  ]
+}
